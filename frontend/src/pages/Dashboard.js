@@ -1,11 +1,11 @@
 import React from 'react';
 
 const sampleUsers = [
-  { id:1, name: 'Michael Holz', date: '04/10/2013', role:'Admin', status:'Active' },
-  { id:2, name: 'Paula Wilson', date: '05/08/2014', role:'Publisher', status:'Active' },
-  { id:3, name: 'Antonio Moreno', date: '11/05/2015', role:'Publisher', status:'Suspended' },
-  { id:4, name: 'Mary Saveley', date: '06/09/2016', role:'Reviewer', status:'Active' },
-  { id:5, name: 'Martin Sommer', date: '12/08/2017', role:'Moderator', status:'Inactive' }
+  { id:1, name: 'Aayush Narang', date: '04/10/2013', role:'Admin', status:'Active' },
+  { id:2, name: 'Tom', date: '05/08/2014', role:'Publisher', status:'Active' },
+  { id:3, name: 'Conor', date: '11/05/2015', role:'Publisher', status:'Suspended' },
+  { id:4, name: 'Khabib', date: '06/09/2016', role:'Reviewer', status:'Active' },
+  { id:5, name: 'Ilia', date: '12/08/2017', role:'Moderator', status:'Inactive' }
 ];
 
 function StatusDot({status}){
