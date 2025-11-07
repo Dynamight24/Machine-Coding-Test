@@ -1,0 +1,299 @@
+/* Global / UI styles to match the screenshots */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --bg: #0b1220;
+  --card: #0b1220;
+  --accent: #00f0d1;
+  --accent-2: #00c2ff;
+  --muted: #94a3b8;
+  --white: #eef2ff;
+  --table-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+body {
+  background: linear-gradient(180deg, #0b1220 0%, #083046 100%);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  margin-bottom: 18px;
+}
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 0 12px;
+}
+
+/* Auth Card */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+/* Auth Card (no change to overflow) */
+/* Auth Card */
+.auth-card{
+  width:420px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+  position:relative;
+  overflow:visible; /* <-- allow the badge to hang outside */
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+
+/* Top badge — moved down and slightly smaller padding so it doesn't get clipped */
+.auth-top{
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  padding:10px 40px;
+  border-radius:6px;
+  color:#012;
+  font-weight:700;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+
+.avatar-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(0, 0, 0, 0.2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px auto;
+  border: 2px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Inputs */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.input-wrap {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.input-wrap input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--white);
+  flex: 1;
+  font-size: 15px;
+}
+.input-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: rgb(245, 247, 248);
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  
+}
+.btn:hover{
+filter: brightness(1.1);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+.small {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.small:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* Message */
+.msg {
+  margin-top: 8px;
+  color: #ffb4b4;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Dashboard Card */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 18px;
+  border-radius: 12px;
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Table styles */
+/* Table styles - dark theme */
+.table-wrap {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+  color: var(--white); /* table text white */
+}
+
+.user-table th {
+  font-weight: 600;
+  color: var(--muted); /* muted headers */
+  font-size: 13px;
+}
+
+.user-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.user-row img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+
+/* status dots */
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.dot.green {
+  background: #10b981;
+}
+.dot.red {
+  background: #ef4444;
+}
+.dot.orange {
+  background: #f59e0b;
+}
+
+/* action icons */
+.action-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 6px;
+  border-radius: 6px;
+}
+.action-gear {
+  color: #0ea5e9;
+}
+.action-delete {
+  color: #ef4444;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.page {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e6eef6;
+  background: #fff;
+  color: #0b1220;
+  cursor: pointer;
+}
+
+
+/* responsive */
+@media (max-width: 600px) {
+  .auth-card {
+    width: 92%;
+    padding: 18px;
+  }
+  .container {
+    padding: 12px;
+  }
+}
